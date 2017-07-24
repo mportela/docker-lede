@@ -6,7 +6,7 @@ Current LEDE version: v17.01.2
 ## How to use
 Start with bash shell:
 ```shell
-docker run -ti --name=lede -v lede-bin:/home/lede/lede/bin acrisliu/lede
+docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
 ```
 Then you can use `make menuconfig` and `make` to build LEDE image.
 
