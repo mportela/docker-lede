@@ -8,15 +8,20 @@ Start with bash shell:
 ```shell
 docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
 ```
-Then you can use `make menuconfig` and `make` to build LEDE image.
 
-You also can build your docker image with external configuration file:
+Then you can configure your LEDE image:
+- run `make menuconfig` and set target;
+- run `make defconfig` to set default config for build system and device;
+- run `make menuconfig` and modify set of package;
+
+and run `make` command to build it.
+
+
+You can also build your docker image with external configuration file:
 
 ```
 FROM acrisliu/lede
-
 COPY .config /home/lede/lede
-
 CMD ["make"]
 ```
 
