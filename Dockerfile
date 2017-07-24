@@ -31,6 +31,8 @@ RUN set -ex \
     && git clone -b $DNS_FORWARDER_VERSION https://github.com/aa65535/openwrt-dns-forwarder.git package/dns-forwarder \
     && git clone -b $SIMPLE_OBFS_VERSION https://github.com/aa65535/openwrt-simple-obfs.git package/simple-obfs \
     && git clone -b $DIST_LUCI_VERSION https://github.com/aa65535/openwrt-dist-luci.git package/openwrt-dist-luci \
+    && mkdir -p files/etc \
+    && wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > files/etc/chinadns_chnroute.txt \
     && ./scripts/feeds update -a \
     && ./scripts/feeds install -a
 
