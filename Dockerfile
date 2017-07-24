@@ -32,8 +32,7 @@ RUN set -ex \
     && git clone -b $SIMPLE_OBFS_VERSION https://github.com/aa65535/openwrt-simple-obfs.git package/simple-obfs \
     && git clone -b $DIST_LUCI_VERSION https://github.com/aa65535/openwrt-dist-luci.git package/openwrt-dist-luci \
     && ./scripts/feeds update -a \
-    && ./scripts/feeds install -a \
-    && make defconfig
+    && ./scripts/feeds install -a
 
 WORKDIR /home/lede/lede
 
