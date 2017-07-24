@@ -32,7 +32,7 @@ Or using config diff file:
 ```
 FROM acrisliu/lede
 COPY diffconfig /tmp
-RUN cp /tmp/diffconfig . && make defconfig
+RUN cp /tmp/diffconfig .config && make defconfig
 CMD ["make"]
 ```
 
