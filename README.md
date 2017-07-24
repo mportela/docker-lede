@@ -9,7 +9,7 @@ Start with bash shell:
 docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
 ```
 
-Ensure that `/path/to/binary` is accessible by the lede user in container.
+Ensure that `/path/to/binary` is writable by the lede user in container.
 
 Then you can configure your LEDE image by following steps:
 - run `make menuconfig` and set target;
