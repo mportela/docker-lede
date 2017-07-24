@@ -13,8 +13,8 @@ ENV DIST_LUCI_VERSION=v1.6.1
 RUN set -ex \
     && apt update \
     && apt install --no-install-recommends --no-install-suggests -y \
-    build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib \
-    flex git-core gettext libssl-dev openssl ca-certificates \
+    subversion g++ zlib1g-dev build-essential git python rsync man-db \
+    libncurses5-dev gawk gettext unzip file libssl-dev wget \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash lede
 
