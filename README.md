@@ -1,5 +1,5 @@
 # Docker LEDE
-This is a LEDE image build environment, include some software for Chinese users.
+This is a LEDE image build environment.
 
 Current LEDE version: v17.01.2
 
@@ -9,12 +9,11 @@ Start with bash shell:
 docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
 ```
 
-Then you can configure your LEDE image:
+Then you can configure your LEDE image by following steps:
 - run `make menuconfig` and set target;
 - run `make defconfig` to set default config for build system and device;
 - run `make menuconfig` and modify set of package;
-
-and run `make` command to build it.
+- run `make` command to build LEDE image.
 
 
 You can also build your docker image with external configuration file:
@@ -25,6 +24,15 @@ COPY .config /home/lede/lede
 CMD ["make"]
 ```
 
+Or using config diff file:
+
+```
+FROM acrisliu/lede
+COPY .diffconfig /home/lede/lede/.config
+RUN make defconfig
+CMD ["make"]
+```
+
 ---
 
-For Netgear R6100, you can use this docker image: https://github.com/Acris/docker-lede-netgear-r6100
+You can find more usage here: https://github.com/Acris/docker-lede-netgear-r6100
