@@ -10,8 +10,6 @@ ENV DNS_FORWARDER_VERSION=v1.2.1
 ENV SIMPLE_OBFS_VERSION=v0.0.3
 ENV DIST_LUCI_VERSION=v1.6.1
 
-COPY build-lede.sh /usr/local/bin/
-
 RUN set -ex \
     && apt update \
     && apt install --no-install-recommends --no-install-suggests -y \
