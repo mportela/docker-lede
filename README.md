@@ -22,7 +22,10 @@ You can also build your docker image with external configuration file:
 
 ```
 FROM acrisliu/lede
+USER root
 COPY .config /home/lede/lede
+RUN chown lede:lede .config
+USER lede
 CMD ["make"]
 ```
 
@@ -30,7 +33,10 @@ Or using config diff file:
 
 ```
 FROM acrisliu/lede
+USER root
 COPY diffconfig /home/lede/lede/.config
+RUN chown lede:lede .config
+USER lede
 RUN make defconfig
 CMD ["make"]
 ```
