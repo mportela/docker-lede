@@ -35,6 +35,4 @@ RUN set -ex \
     && ./scripts/feeds update -a \
     && ./scripts/feeds install -a
 
-WORKDIR /home/lede/lede
-
-CMD ["build-lede.sh"]
+CMD ["/bin/bash"]
