@@ -1,6 +1,8 @@
 # Docker LEDE
 This is a LEDE image build environment, include some software for Chinese users.
 
+Current LEDE version: v17.01.2
+
 ## How to use
 Start with bash shell:
 ```shell
