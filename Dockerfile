@@ -15,8 +15,8 @@ COPY build-lede.sh /usr/local/bin/
 RUN set -ex \
     && apt update \
     && apt install --no-install-recommends --no-install-suggests -y \
-    subversion g++ zlib1g-dev build-essential git python rsync man-db \
-    libncurses5-dev gawk gettext unzip file libssl-dev wget openssl ca-certificates \
+    build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib \
+    flex git-core gettext libssl-dev openssl ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash lede
 
