@@ -30,10 +30,12 @@ Or using config diff file:
 
 ```
 FROM acrisliu/lede
-COPY .diffconfig /home/lede/lede/.config
+COPY diffconfig /home/lede/lede/.config
 RUN make defconfig
 CMD ["make"]
 ```
+
+For more information about diff file, you can see here: https://lede-project.org/docs/guide-developer/use-buildsystem#configure_using_config_diff_file
 
 ---
 
