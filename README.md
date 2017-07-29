@@ -8,7 +8,7 @@ If you need a stable release version, plese check here: https://github.com/Acris
 ## How to use
 Start with bash shell:
 ```shell
-docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
+docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede:shapshots
 ```
 
 Ensure that `/path/to/binary` is writable by the lede user in container.
@@ -23,7 +23,7 @@ Then you can configure your LEDE image by following steps:
 You can also build your docker image with external configuration file:
 
 ```
-FROM acrisliu/lede
+FROM acrisliu/lede:shapshots
 COPY .config /tmp
 RUN cp /tmp/.config .
 CMD ["make"]
@@ -32,7 +32,7 @@ CMD ["make"]
 Or using config diff file:
 
 ```
-FROM acrisliu/lede
+FROM acrisliu/lede:shapshots
 COPY diffconfig /tmp
 RUN cp /tmp/diffconfig .config && make defconfig
 CMD ["make"]
