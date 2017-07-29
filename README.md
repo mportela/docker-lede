@@ -1,7 +1,7 @@
 # Docker LEDE
 This is a LEDE image build environment.
 
-Current LEDE version: v17.01.2
+Current LEDE version: master branch
 
 ## How to use
 Start with bash shell:
