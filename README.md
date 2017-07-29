@@ -6,7 +6,7 @@ Current LEDE version: v17.01.2
 ## How to use
 Start with bash shell:
 ```shell
-docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede:17.01.2
+docker run -ti --name=lede -v /path/to/binary:/home/lede/lede/bin acrisliu/lede
 ```
 
 Ensure that `/path/to/binary` is writable by the lede user in container.
@@ -21,7 +21,7 @@ Then you can configure your LEDE image by following steps:
 You can also build your docker image with external configuration file:
 
 ```
-FROM acrisliu/lede:17.01.2
+FROM acrisliu/lede
 COPY .config /tmp
 RUN cp /tmp/.config .
 CMD ["make"]
@@ -30,7 +30,7 @@ CMD ["make"]
 Or using config diff file:
 
 ```
-FROM acrisliu/lede:17.01.2
+FROM acrisliu/lede
 COPY diffconfig /tmp
 RUN cp /tmp/diffconfig .config && make defconfig
 CMD ["make"]
