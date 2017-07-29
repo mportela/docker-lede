@@ -1,9 +1,9 @@
 # Docker LEDE
 This is a LEDE image build environment.
 
-Current LEDE version: master branch
+Current LEDE version: shapshots
 
-If you need a stable release version, plese check here: https://github.com/Acris/docker-lede/branches
+If you need a stable release version, plese check here: https://github.com/Acris/docker-lede/tree/releases
 
 ## How to use
 Start with bash shell:
