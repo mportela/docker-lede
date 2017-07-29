@@ -21,7 +21,7 @@ Then you can configure your LEDE image by following steps:
 You can also build your docker image with external configuration file:
 
 ```
-FROM acrisliu/lede
+FROM acrisliu/lede:17.01.2
 COPY .config /tmp
 RUN cp /tmp/.config .
 CMD ["make"]
@@ -30,7 +30,7 @@ CMD ["make"]
 Or using config diff file:
 
 ```
-FROM acrisliu/lede
+FROM acrisliu/lede:17.01.2
 COPY diffconfig /tmp
 RUN cp /tmp/diffconfig .config && make defconfig
 CMD ["make"]
