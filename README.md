@@ -3,7 +3,7 @@ This is a LEDE image build environment.
 
 Current LEDE version: shapshots
 
-If you need a stable release version, plese check here: https://github.com/Acris/docker-lede/tree/releases
+If you need a stable release version, plese check here: https://github.com/Acris/docker-lede
 
 ## How to use
 Start with bash shell:
