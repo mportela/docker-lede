@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 
 MAINTAINER Acris Liu "acrisliu@gmail.com"
 
-ENV LEDE_VERSION=v17.01.3
+ENV LEDE_VERSION=v17.01.4
 
 RUN set -ex \
     && apt update \
