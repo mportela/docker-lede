@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER Acris Liu "acrisliu@gmail.com"
+MAINTAINER Marcel Portela "marcel.portela@gmail.com"
 
 ENV LEDE_VERSION=v17.01.4
 
@@ -16,10 +16,7 @@ USER lede
 
 RUN set -ex \
     && cd /home/lede \
-    && git clone -b $LEDE_VERSION https://git.lede-project.org/source.git lede \
-    && cd lede \
-    && ./scripts/feeds update -a \
-    && ./scripts/feeds install -a
+    && git clone -b $LEDE_VERSION https://git.lede-project.org/source.git lede
 
 WORKDIR /home/lede/lede
 
